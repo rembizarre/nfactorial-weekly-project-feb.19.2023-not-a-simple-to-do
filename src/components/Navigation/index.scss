@@ -1,0 +1,53 @@
+.navigation {
+    padding: 0px 24px;
+    flex-direction: column;
+
+    &__top {
+        justify-content: space-between;
+        margin-bottom: 64px;
+    }
+
+    &__buttons {
+        padding: 12px;
+    }
+
+    &__button {
+        padding: 10px 24px;
+        background: linear-gradient(0deg, rgba(8, 30, 52, 0.05), rgba(8, 30, 52, 0.05)), #f0f0f0;
+        border-radius: 100px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        &_active {
+            background: rgba(8, 30, 52, 0.42);
+            color: #ffffff;
+        }
+    }
+
+    &__add-wrapper {
+        position: relative;
+        height: 52px;
+    }
+
+    &__add {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 53px;
+        height: 52px;
+        background: linear-gradient(0deg, #081e34, #081e34), #f0f0f0;
+        border-radius: 100px;
+    }
+
+    &__header {
+        margin-bottom: 24px;
+        padding-bottom: 26px;
+        border-bottom: 2px solid rgba(21, 21, 23, 0.2);
+    }
+}

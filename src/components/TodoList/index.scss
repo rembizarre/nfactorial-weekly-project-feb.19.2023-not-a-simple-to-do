@@ -1,0 +1,119 @@
+.todo {
+  position: relative;
+  align-items: start;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #151517;
+
+  &__chosen {
+    background: #e4e6e7;
+  }
+
+  &__control {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../images/control.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  &__check {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    margin-right: 12px;
+    margin-top: 3px;
+    border: 1.4px solid #aeaeae;
+    border-radius: 4px;
+  }
+
+  &__check_checked {
+    position: relative;
+    background: #712fff;
+  }
+
+  &__check_checked::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url(../../images/check.svg);
+    background-size: 10px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #151517;
+
+    &_checked {
+      text-decoration: line-through;
+      color: #959595;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .popup-to-trash {
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    padding: 12px 100px 12px 40px;
+    background: #e4e6e7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #353535;
+    background-image: url(../../images/delete.svg);
+    background-size: 11px auto;
+    background-position: 14px center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .popup-from-trash {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    padding: 12px 100px 12px 4px;
+    background: #e4e6e7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #353535;
+
+    &__delete {
+      margin-bottom: 10px;
+      padding-left: 36px;
+      background-image: url(../../images/delete.svg);
+      background-size: 11px auto;
+      background-position: 14px center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    &__to-do {
+      padding-left: 36px;
+      background-image: url(../../images/to-do.svg);
+      background-size: 14px auto;
+      background-position: 12px center;
+      background-repeat: no-repeat;
+    }
+  }
+}
